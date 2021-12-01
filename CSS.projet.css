@@ -1,0 +1,676 @@
+/* Ici, j'initialise l'affichage des règles en début de jeu */
+
+#règles{
+    border : solid black ;
+    width: 900px;
+    height: 700px;
+    background-image:url(Map.png) ; 
+    background-size: cover ;
+    display: block;
+}
+
+#titreRègles {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    background-color : rgb(21, 255, 0, .5) ;
+    border-radius: 7px ;
+    border : solid black  ;
+    width: 820px;
+    margin-left: 35px;
+    margin-top: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#decompteDebutPartie {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 100px;
+    text-align: center;
+    margin-left: 30px;
+}
+
+#decompteDebutPartie{
+    border : solid black ;
+    border-radius: 90px;
+    background-color: rgb(21, 255, 0, .5) ;
+    width: 260px;
+    height: 260px;
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    margin-right: 60px;
+}
+
+#Règles{
+    font-size: 30px;
+    background-color : rgb(21, 255, 0, .5) ;
+    border-radius: 7px ;
+    border : solid black  ;
+    height: 410px;
+    width: 820px;
+    margin-left: 28px;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+#bouttonJouer{
+    background-color : rgb(21, 255, 0, .5);
+    font-size: 40px;
+    border-radius: 7px ;
+    border : solid black  ;
+    width: 120px;
+    text-align: center;
+    margin-left: 750px;
+    margin-top: 15px;
+}
+
+#interface {background-image:url(Map.png);
+            background-size: cover ;
+            border : solid black ;
+            width: 900px;
+            height: 700px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            visibility: hidden;
+}
+
+/* Ici, j'initialise l'affichage de la boite de dialogue qui va changer en fonctions des actions du jeu */
+
+.haut{
+    display: flex;
+    justify-content: center;
+}
+
+#boiteDialogue { 
+    border : solid rgb(0, 48, 6) ; 
+    padding : 10px  ; 
+    border-radius: 7px ; 
+    border-width: 5px ;
+    background-color : rgb(21, 255, 0, .5) ; 
+    width : 500px ; 
+    text-align: center ; 
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+/* Ici, j'initialise la partie centrale de mon interface, l'affichage des 4 héros, des 3 ennemis ainsi que leurs points de vie et noms respectifs */
+
+.milieu{
+    display: flex;
+    justify-content: space-between;
+}
+
+img{
+    width: 110px;
+}
+
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-left: 30px;
+}
+
+#hero1{
+    padding-left: 100px;
+    display: flex;
+}
+
+.hpUltiImage {	
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    position: absolute;
+    visibility: hidden;
+    margin-left: -60px;
+    margin-top: 10px;
+    width: 65px;
+}
+
+#hero1:hover .hpUltiImage {
+    visibility: visible;
+    background-color: rgb(21, 255, 0, .5);
+    border : solid black ;
+    border-radius: 90px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.nomUlti{	
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    position: absolute;
+    visibility: visible;
+    margin-left: -60px;
+    margin-top: 10px;
+    width: 65px;
+    background-color: rgb(21, 255, 0, .5);
+    border : solid black ;
+    border-radius: 90px;
+    padding-top: 22px;
+    padding-bottom: 23px;
+}
+
+#hero1:hover .nomUlti {
+    visibility: hidden;
+}
+    
+#hero2{
+    padding-left: 30px;
+    display: flex;
+}
+
+.hpLightImage {	
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    position: absolute;
+    visibility: hidden;
+    margin-left: -55px;
+    margin-top: 10px;
+    width: 65px
+}
+
+#hero2:hover .hpLightImage {
+    visibility: visible;
+    background-color: rgb(21, 255, 0, .5);
+    border : solid black ;
+    border-radius: 90px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.nomLight{	
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    position: absolute;
+    visibility: visible;
+    margin-left: -55px;
+    margin-top: 10px;
+    width: 65px;
+    background-color: rgb(21, 255, 0, .5);
+    border : solid black ;
+    border-radius: 90px;
+    padding-top: 23px;
+    padding-bottom: 23px;
+}
+
+#hero2:hover .nomLight {
+    visibility: hidden;
+}
+
+#hero3{
+    padding-left: 30px;
+    display: flex;
+}
+
+.hpGladImage {	
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    position: absolute;
+    visibility: hidden;
+    margin-left: -55px;
+    margin-top: 10px;
+    width: 65px
+}
+
+#hero3:hover .hpGladImage {
+    visibility: visible;
+    background-color: rgb(21, 255, 0, .5);
+    border : solid black ;
+    border-radius: 90px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.nomGlad{	
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    position: absolute;
+    visibility: visible;
+    margin-left: -55px;
+    margin-top: 10px;
+    width: 65px;
+    background-color: rgb(21, 255, 0, .5);
+    border : solid black ;
+    border-radius: 90px;
+    padding-top: 23px;
+    padding-bottom: 23px;
+}
+
+#hero3:hover .nomGlad {
+    visibility: hidden;
+}
+
+#hero4{
+    padding-left: 100px;
+    display: flex;
+}
+
+.hpNinjaImage {	
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    position: absolute;
+    visibility: hidden;
+    margin-left: -60px;
+    margin-top: 10px;
+    width: 65px
+}
+
+#hero4:hover .hpNinjaImage {
+    visibility: visible;
+    background-color: rgb(21, 255, 0, .5);
+    border : solid black ;
+    border-radius: 90px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.nomNinja{	
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    position: absolute;
+    visibility: visible;
+    margin-left: -55px;
+    margin-top: 10px;
+    width: 65px;
+    background-color: rgb(21, 255, 0, .5);
+    border : solid black ;
+    border-radius: 90px;
+    padding-top: 23px;
+    padding-bottom: 23px;
+}
+
+#hero4:hover .nomNinja {
+    visibility: hidden;
+}
+
+.E{
+    width: 92px;
+}
+
+#ennemi {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 250px;
+    padding-right: 15px;
+}
+
+#ennemi1 {
+    display: flex;
+    justify-content: center;
+    padding-left: 30px;
+}
+
+.hpEnnemi1 {	
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    position: absolute;
+    visibility: hidden;
+    margin-left: 160px;
+    margin-top: 30px;
+    width: 65px
+}
+    
+#ennemi1:hover .hpEnnemi1 {
+    visibility: visible;
+    background-color: red;
+    border : solid black ;
+    border-radius: 90px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.Burner{	
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    position: absolute;
+    visibility: hidden;
+    margin-left: 160px;
+    margin-top: 30px;
+    width: 65px;
+    visibility: visible;
+    background-color: red;
+    border : solid black ;
+    border-radius: 90px;
+    padding-top: 23px;
+    padding-bottom: 23px;
+}
+
+#ennemi1:hover .Burner {
+    visibility: hidden;
+}
+
+#ennemi2 {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.hpEnnemi2 {	
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    position: absolute;
+    visibility: hidden;
+    margin-left: 90px;
+    margin-top: 30px;
+    width: 65px
+}
+    
+#ennemi2:hover .hpEnnemi2 {
+    visibility: visible;
+    background-color: red;
+    border : solid black ;
+    border-radius: 90px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 14px;
+    padding-bottom: 14px;	
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.Cleaner{	
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    position: absolute;
+    visibility: hidden;
+    margin-left: 90px;
+    margin-top: 30px;
+    width: 65px;
+    visibility: visible;
+    background-color: red;
+    border : solid black ;
+    border-radius: 90px;
+    padding-top: 23px;
+    padding-bottom: 23px;
+}
+
+#ennemi2:hover .Cleaner {
+    visibility: hidden;
+}
+
+#ennemi3 {
+    display: flex;
+    justify-content: center;
+    padding-left: 30px;
+}
+    
+.hpEnnemi3 {	
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    position: absolute;
+    visibility: hidden;
+    margin-left: 160px;
+    margin-top: 30px;
+    padding-left: 2px;
+    padding-right: 2px;
+    width: 65px
+}
+    
+#ennemi3:hover .hpEnnemi3 {
+    visibility: visible;
+    background-color: red;
+    border : solid black ;
+    border-radius: 90px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 14px;
+    padding-bottom: 14px;	
+}
+
+.Hurler{	
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    position: absolute;
+    visibility: hidden;
+    margin-left: 160px;
+    margin-top: 30px;
+    width: 65px;
+    visibility: visible;
+    background-color: red;
+    border : solid black ;
+    border-radius: 90px;
+    padding-top: 23px;
+    padding-bottom: 23px;
+}
+
+#ennemi3:hover .Hurler {
+    visibility: hidden;
+}
+
+/* Ici, j'initialise la partie basse de mon interface, l'affichage des noms des héros, éléments cliquables pour le choix du jouer, leurs points de mana et leurs points de vie */
+
+.bas{
+    display: flex;
+    justify-content: space-around;
+}
+
+.personnages {
+    border : solid rgb(0, 48, 6) ; 
+    padding:10px ; 
+    border-radius: 7px ; 
+    border-width: 5px ;
+    background-color : rgb(0, 177, 9, .5) ;  
+    font-size: 25px; 
+    width: 400px;
+    height: 170px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+#avantUlti {
+    display : block;
+}
+
+#apresUlti {
+    display : none;
+    color: rgb(21, 255, 0);
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+#avantLight{
+    display : block;
+}
+
+#apresLight {
+    display : none;
+    color: rgb(21, 255, 0);
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+#avantGlad {
+    display : block;
+}
+
+#apresGlad {
+    display : none;
+    color: rgb(21, 255, 0);
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+#avantNinja {
+    display : block;
+}
+
+#apresNinja {
+    display : none;
+    color: rgb(21, 255, 0);
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.hpMana {
+    display: flex;
+    justify-content: space-between;
+    width: 240px;
+}
+
+#hpUlti:hover{
+    color: rgb(21, 255, 0);
+}
+
+.hpUlti {
+    display: flex;
+    justify-content: center;
+}
+
+#hpLight:hover{
+    color: rgb(21, 255, 0);
+}
+.hpLight {
+    display: flex;
+    justify-content: center;
+}
+
+#hpGlad:hover{
+    color: rgb(21, 255, 0);
+}
+.hpGlad {
+    display: flex;
+    justify-content: center;
+}
+
+#hpNinja:hover{
+    color: rgb(21, 255, 0);
+}
+
+.hpNinja {
+    display: flex;
+    justify-content: center;
+    
+}
+
+#manaUlti:hover{
+    color: rgb(21, 255, 0);
+}
+#manaUltiLigne {
+    display: flex;
+    justify-content: center;
+}
+
+#manaLight:hover{
+    color: rgb(21, 255, 0);
+}
+#manaLightLigne {
+    display: flex;
+    justify-content: center;
+}
+
+#manaGlad:hover{
+    color: rgb(21, 255, 0);
+}
+#manaGladLigne {
+    display: flex;
+    justify-content: center;
+}
+
+#manaNinja:hover{
+    color: rgb(21, 255, 0);
+}
+
+#manaNinjaLigne {
+    display: flex;
+    justify-content: center;
+}
+
+/* Ici, j'initialise toujours dans la partie basse de mon interface, le choix des mes héros au cours de la partie, éléments aussi cliquables qui va créer les mécaniques de jeu */
+
+#ordre {
+    border : solid rgb(0, 48, 6) ;
+    padding-left:15px ;
+    border-radius: 7px ;
+    border-width: 5px ;
+    background-color : rgb(0, 177, 9, .5) ; 
+    font-size: 25px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 230px;
+    margin-bottom: 15px;
+    visibility: hidden;;
+}
+
+.attaquer #attaqueApres, .attaquer:hover .avant {
+    display : none;
+}
+
+.attaquer:hover #attaqueApres {
+    display : block;
+    color: rgb(255, 0, 0);
+    font-size: 30px;
+    text-decoration: underline;
+    color: rgb(255, 0, 0);
+}
+
+.defendre #defendreApres, .defendre:hover .avant {
+    display : none;
+}
+
+.defendre:hover #defendreApres {
+    display : block;
+    color: rgb(255, 0, 0);
+    font-size: 30px;
+    text-decoration: underline;
+    color: rgb(255, 0, 0);
+}
+
+.special #specialApres, .special:hover #specialAvant {
+    display : none;
+}
+
+.special:hover #specialApres {
+    display : block;
+    color: rgb(255, 0, 0);
+    font-size: 30px;
+    text-decoration: underline;
+    color: rgb(255, 0, 0);
+}

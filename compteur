@@ -1,0 +1,15 @@
+
+JAVASCRIPT
+
+(avant le timer)
+
+bouttonJouer.onclick = function () {
+    règles.style.display = "none";
+    interface.style.visibility = "visible";
+    decompte();
+}
+
+function decompte(){
+
+
+

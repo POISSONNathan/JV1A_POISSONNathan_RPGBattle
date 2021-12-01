@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="CSS.projet.css">
+        <script src ="JS.projet.js" async></script>
+    </head>
+    <body>
+
+        <div id="règles">
+            <div id="titreRègles"><strong><u>Règles du jeu / Comment jouer :</u></strong></div>
+            <div id="Règles">
+                <strong><u>Objectif :</u></strong> tuer les 3 ennemis<br><br>
+                Faites un choix pour chaque héros parmis 3 actions :<br>
+                - Attaquer ; <br>
+                - Se Défendre ; <br>
+                - Attaque spéciale (spécifique à chacun des personnages)<br>
+                Vous attaquez vos ennemis aléatoirement parmis les 3 présents sur la map.<br>
+                Vous perdez des points de mana spécifique à chaque actions.<br>
+                Après avoir attaqué avec vos 4 personnages, chacun des ennemis riposte 1 par 1 en attaquant aléatoirement vos héros.
+            </div>
+            <div id="bouttonJouer">Jouer</div>
+        </div>
+        <div id="interface">
+            
+            <div class="haut">
+            <strong>
+                <div id="boiteDialogue">Début de la partie !</div>
+                
+            </strong>
+            </div>  
+            
+            <div class="milieu">
+
+                <div id="hero">
+                <strong>
+                    <div id="hero1">
+                        <img id="ultiImage" src="Hero1.png">
+                        <div class="nomUlti">Ulti</div>
+                        <div class ="hpUltiImage"><div id="hpUltiImage">Place Hp Ulti</div>hp</div>
+                    </div>
+                    <div id="hero2">
+                        <img src="Hero2.png"> 
+                        <div class="nomLight">Light</div>
+                        <div class ="hpLightImage"><div id="hpLightImage">Place Hp Light</div>hp</div>                      
+                    </div>                        
+                    <div id="hero3">
+                        <img src="Hero3.png">  
+                        <div class="nomGlad">Glad</div>
+                        <div  class ="hpGladImage"><div id="hpGladImage">Place Hp Glad</div>hp</div>                
+                    </div>
+                    <div id="hero4">
+                        <img src="Hero4.png">  
+                        <div class="nomNinja">Ninja</div>
+                        <div class ="hpNinjaImage"><div id = "hpNinjaImage">Place Hp Ninja</div>hp</div>                                        
+                    </div>
+                </strong>
+                </div>
+
+                <div id="decompteDebutPartie">Place decompte</div>
+
+                <div id="ennemi">
+                <strong>
+                    <div id="ennemi1">
+                        <img class="E" id="burner" src="Ennemi1.png">
+                        <div class="Burner">Burner</div>
+                        <div class ="hpEnnemi1"><div id="hpEnnemi1Image">150</div>hp</div>
+                    </div>
+                    <div id="ennemi2">
+                        <img class="E" src="Ennemi2.png">
+                        <div class="Cleaner">Cleaner</div>
+                        <div class ="hpEnnemi2"><div id="hpEnnemi2Image">150</div>hp</div>
+                    </div>
+                    <div id="ennemi3">
+                        <img class="E" src="Ennemi3.png">
+                        <div class="Hurler">Hurler</div>
+                        <div class ="hpEnnemi3"><div id="hpEnnemi3Image">150</div>hp</div>
+                    </div>
+                </strong>
+                </div>
+                
+            </div>
+
+            
+            <div class="bas">
+               
+                <div class="personnages "> 
+                    <div class="nomPerso">
+                    <strong>
+                        <div class="titreHero"> <u>HEROES</u> </div><br>
+                        <div class="ulti">
+                            <div id="avantUlti" >Ulti</div>
+                            <div id="apresUlti" >> Ulti</div>
+                        </div>
+                        <div class="light">
+                            <div id="avantLight">Light</div>
+                            <div id="apresLight">> Light</div>
+                        </div>
+                        <div class="glad">
+                            <div id="avantGlad">Glad</div>
+                            <div id="apresGlad">> Glad</div>
+                        </div>
+                        <div class="ninja">
+                            <div id="avantNinja">Ninja</div>
+                            <div id="apresNinja">> Ninja</div>
+                        </div>
+                    </strong>
+                    </div>
+                    
+                    <div class="hpMana">
+                        <div class="hp">
+                        <strong>
+                            <div id="titreHP"> <strong><u>HP</u></strong> </div><br>
+                            <div class="hpUlti"> <div id="hpUlti">100</div>/100</div>
+                            <div class="hpLight"> <div id="hpLight">100</div> /100 </div>
+                            <div class="hpGlad"> <div id="hpGlad">100</div>/100 </div>
+                            <div class="hpNinja"> <div id="hpNinja">100</div>/100 </div>
+                        </strong>
+                        </div>
+
+                        <div class="mana">
+                        <strong>
+                            <div id="titreMana"> <strong><u>MANA</u></strong> </div><br>
+                            <div id="manaUltiLigne"> <div id="manaUlti">50</div>/100</div>
+                            <div id="manaLightLigne"> <div id="manaLight">100</div>/100 </div>
+                            <div id="manaGladLigne"> <div id="manaGlad">100</div>/100 </div>
+                            <div id="manaNinjaLigne"> <div id="manaNinja">100</div>/100 </div>
+                        </strong>
+                        </div>
+                    </div>
+                </div>
+              
+                <div id="ordre"> 
+                    <div class="attaquer">
+                    <strong>                 
+                        <div class="avant">Attaquer</div>
+                        <div id="attaqueApres">> Attaquer </div>
+                    </strong>                 
+                    </div>
+                    <div class="defendre">
+                    <strong>                 
+                        <div class="avant">Se defendre</div>
+                        <div id="defendreApres">> Se defendre</div>
+                    </strong>                 
+                    </div>
+                    <div class="special">
+                    <strong>                 
+                        <div id="specialAvant">Special (50 Mana)</div>
+                        <div id="specialApres">> Special</div>
+                    </strong>                 
+                    </div>                  
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
+</html>
