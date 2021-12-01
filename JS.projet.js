@@ -73,7 +73,8 @@ function decompte(){
     },1000);
 
     setTimeout( function (){
-        decompteDebutPartie.innerHTML = 1
+        decompteDebutPartie.innerHTML = 1h
+        
     },2000);
 
     setTimeout( function (){
