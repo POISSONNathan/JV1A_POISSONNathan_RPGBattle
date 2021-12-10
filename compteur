@@ -1,15 +1,27 @@
-
-JAVASCRIPT
-
-(avant le timer)
-
-bouttonJouer.onclick = function () {
-    règles.style.display = "none";
-    interface.style.visibility = "visible";
-    decompte();
-}
-
 function decompte(){
 
+    setTimeout( function (){
+        decompteDebutPartie.innerHTML = 3
+    },0000);
+
+    setTimeout( function (){
+        decompteDebutPartie.innerHTML = 2
+    },1000);
+
+    setTimeout( function (){
+        decompteDebutPartie.innerHTML = 1
+
+    },2000);
+
+    setTimeout( function (){
+        decompteDebutPartie.style.fontSize = '72px';
+        decompteDebutPartie.innerHTML = "A toi de jouer !"
+    },3000);
+
+    setTimeout( function (){
+        decompteDebutPartie.style.display = "none"
+        choixUlti()
+    },4000); 
+}
 
 

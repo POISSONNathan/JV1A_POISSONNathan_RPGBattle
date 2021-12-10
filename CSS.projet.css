@@ -30,18 +30,12 @@
     font-size: 100px;
     text-align: center;
     margin-left: 30px;
-}
-
-#decompteDebutPartie{
     border : solid black ;
     border-radius: 90px;
     background-color: rgb(21, 255, 0, .5) ;
     width: 260px;
     height: 260px;
-    display: flex;
-    justify-content: center;
-    margin-top: 70px;
-    margin-right: 60px;
+    margin-right: 50px;
 }
 
 #Règles{
@@ -95,7 +89,7 @@
     text-align: center ; 
     font-size: 30px;
     margin-top: 20px;
-}
+}   
 
 /* Ici, j'initialise la partie centrale de mon interface, l'affichage des 4 héros, des 3 ennemis ainsi que leurs points de vie et noms respectifs */
 
@@ -104,12 +98,37 @@
     justify-content: space-between;
 }
 
+#persoDecompte{
+    height: 200px;
+    padding-top: 100px;
+}
+
+#hero1Milieu{
+    display: none;
+    width: 220px;
+}
+
+#hero2Milieu{
+    display: none;
+    width: 220px;
+}
+
+#hero3Milieu{
+    display: none;
+    width: 220px;
+}
+
+#hero4Milieu{
+    display: none;
+    width: 220px;
+}
+
 img{
     width: 110px;
 }
 
 
-#hero {
+#hero { 
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -121,37 +140,11 @@ img{
     display: flex;
 }
 
-.hpUltiImage {	
-    font-size: 18px;
-    color: black;
-    text-align: center;
-    position: absolute;
-    visibility: hidden;
-    margin-left: -60px;
-    margin-top: 10px;
-    width: 65px;
-}
-
-#hero1:hover .hpUltiImage {
-    visibility: visible;
-    background-color: rgb(21, 255, 0, .5);
-    border : solid black ;
-    border-radius: 90px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    padding-left: 2px;
-    padding-right: 2px;
-}
-
 .nomUlti{	
     font-size: 18px;
     color: black;
     text-align: center;
     position: absolute;
-    visibility: visible;
     margin-left: -60px;
     margin-top: 10px;
     width: 65px;
@@ -161,39 +154,10 @@ img{
     padding-top: 22px;
     padding-bottom: 23px;
 }
-
-#hero1:hover .nomUlti {
-    visibility: hidden;
-}
     
 #hero2{
     padding-left: 30px;
     display: flex;
-}
-
-.hpLightImage {	
-    font-size: 18px;
-    color: black;
-    text-align: center;
-    position: absolute;
-    visibility: hidden;
-    margin-left: -55px;
-    margin-top: 10px;
-    width: 65px
-}
-
-#hero2:hover .hpLightImage {
-    visibility: visible;
-    background-color: rgb(21, 255, 0, .5);
-    border : solid black ;
-    border-radius: 90px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    padding-left: 2px;
-    padding-right: 2px;
 }
 
 .nomLight{	
@@ -201,7 +165,6 @@ img{
     color: black;
     text-align: center;
     position: absolute;
-    visibility: visible;
     margin-left: -55px;
     margin-top: 10px;
     width: 65px;
@@ -210,10 +173,6 @@ img{
     border-radius: 90px;
     padding-top: 23px;
     padding-bottom: 23px;
-}
-
-#hero2:hover .nomLight {
-    visibility: hidden;
 }
 
 #hero3{
@@ -221,37 +180,11 @@ img{
     display: flex;
 }
 
-.hpGladImage {	
-    font-size: 18px;
-    color: black;
-    text-align: center;
-    position: absolute;
-    visibility: hidden;
-    margin-left: -55px;
-    margin-top: 10px;
-    width: 65px
-}
-
-#hero3:hover .hpGladImage {
-    visibility: visible;
-    background-color: rgb(21, 255, 0, .5);
-    border : solid black ;
-    border-radius: 90px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    padding-left: 2px;
-    padding-right: 2px;
-}
-
 .nomGlad{	
     font-size: 18px;
     color: black;
     text-align: center;
     position: absolute;
-    visibility: visible;
     margin-left: -55px;
     margin-top: 10px;
     width: 65px;
@@ -260,10 +193,6 @@ img{
     border-radius: 90px;
     padding-top: 23px;
     padding-bottom: 23px;
-}
-
-#hero3:hover .nomGlad {
-    visibility: hidden;
 }
 
 #hero4{
@@ -271,37 +200,11 @@ img{
     display: flex;
 }
 
-.hpNinjaImage {	
-    font-size: 18px;
-    color: black;
-    text-align: center;
-    position: absolute;
-    visibility: hidden;
-    margin-left: -60px;
-    margin-top: 10px;
-    width: 65px
-}
-
-#hero4:hover .hpNinjaImage {
-    visibility: visible;
-    background-color: rgb(21, 255, 0, .5);
-    border : solid black ;
-    border-radius: 90px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    padding-left: 2px;
-    padding-right: 2px;
-}
-
 .nomNinja{	
     font-size: 18px;
     color: black;
     text-align: center;
     position: absolute;
-    visibility: visible;
     margin-left: -55px;
     margin-top: 10px;
     width: 65px;
@@ -311,11 +214,6 @@ img{
     padding-top: 23px;
     padding-bottom: 23px;
 }
-
-#hero4:hover .nomNinja {
-    visibility: hidden;
-}
-
 .E{
     width: 92px;
 }
@@ -364,11 +262,9 @@ img{
     color: black;
     text-align: center;
     position: absolute;
-    visibility: hidden;
     margin-left: 160px;
     margin-top: 30px;
     width: 65px;
-    visibility: visible;
     background-color: red;
     border : solid black ;
     border-radius: 90px;
@@ -415,11 +311,9 @@ img{
     color: black;
     text-align: center;
     position: absolute;
-    visibility: hidden;
     margin-left: 90px;
     margin-top: 30px;
     width: 65px;
-    visibility: visible;
     background-color: red;
     border : solid black ;
     border-radius: 90px;
@@ -467,11 +361,9 @@ img{
     color: black;
     text-align: center;
     position: absolute;
-    visibility: hidden;
     margin-left: 160px;
     margin-top: 30px;
     width: 65px;
-    visibility: visible;
     background-color: red;
     border : solid black ;
     border-radius: 90px;
@@ -558,7 +450,7 @@ img{
     color: rgb(21, 255, 0);
 }
 
-.hpUlti {
+#hpUltiLigne {
     display: flex;
     justify-content: center;
 }
@@ -566,7 +458,7 @@ img{
 #hpLight:hover{
     color: rgb(21, 255, 0);
 }
-.hpLight {
+#hpLightLigne {
     display: flex;
     justify-content: center;
 }
@@ -574,7 +466,7 @@ img{
 #hpGlad:hover{
     color: rgb(21, 255, 0);
 }
-.hpGlad {
+#hpGladLigne {
     display: flex;
     justify-content: center;
 }
@@ -583,7 +475,7 @@ img{
     color: rgb(21, 255, 0);
 }
 
-.hpNinja {
+#hpNinjaLigne {
     display: flex;
     justify-content: center;
     
