@@ -25,20 +25,17 @@
 
 #decompteDebutPartie {
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+    justify-content: center;
     font-size: 100px;
-    text-align: center;
-    margin-left: 30px;
     border : solid black ;
     border-radius: 90px;
     background-color: rgb(21, 255, 0, .5) ;
-    width: 260px;
-    height: 260px;
-    margin-right: 50px;
+    width: 280px;
+    height: 190px;
+    padding-top: 50px;
 }
 
-#Règles{
+#reglesEcrites{
     font-size: 30px;
     background-color : rgb(21, 255, 0, .5) ;
     border-radius: 7px ;
@@ -50,7 +47,106 @@
     padding: 10px;
 }
 
+#boutton{
+    display: flex;
+    justify-content: space-around;
+}
+
+#bouttonVoirSpecial{
+    background-color : rgb(21, 255, 0, .5);
+    font-size: 30px;
+    border-radius: 7px ;
+    border : solid black  ;
+    width: 500px;
+    text-align: center;
+    padding-top: 7px;
+    margin-top: 15px;
+}
+
 #bouttonJouer{
+    background-color : rgb(21, 255, 0, .5);
+    font-size: 40px;
+    border-radius: 7px ;
+    border : solid black  ;
+    width: 120px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin-top: 14px;
+}
+
+#finPartie{
+    border : solid black ;
+    width: 900px;
+    height: 700px;
+    background-image:url(Map.png) ; 
+    background-size: cover ;
+    display: none;
+}
+
+#titrePartieFinit {
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color : rgb(21, 255, 0, .5) ;
+    border-radius: 7px ;
+    border : solid black  ;
+    width: 600px;
+    margin-left: 150px;
+    margin-top: 40px;
+}
+
+#gagnant{
+    font-size: 100px;
+    background-color : rgb(21, 255, 0, .5) ;
+    border-radius: 7px ;
+    border : solid black  ;
+    height: 350px;
+    width: 820px;
+    margin-left: 37px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#specialHero{
+    border : solid black ;
+    width: 900px;
+    height: 700px;
+    background-image:url(Map.png) ; 
+    background-size: cover ;
+    display: none;
+}
+
+#titreSpecialHero{
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    background-color : rgb(21, 255, 0, .5) ;
+    border-radius: 7px ;
+    border : solid black  ;
+    width: 820px;
+    margin-left: 30px;
+    margin-top: 20px;
+    padding: 8px;
+}
+
+#descriptifs{
+    font-size: 30px;
+    background-color : rgb(21, 255, 0, .5) ;
+    border-radius: 7px ;
+    border : solid black  ;
+    height: 410px;
+    width: 820px;
+    margin-left: 28px;
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#bouttonRetour{
     background-color : rgb(21, 255, 0, .5);
     font-size: 40px;
     border-radius: 7px ;
@@ -59,6 +155,7 @@
     text-align: center;
     margin-left: 750px;
     margin-top: 15px;
+    margin-top: 17px;
 }
 
 #interface {background-image:url(Map.png);
@@ -121,6 +218,21 @@
 #hero4Milieu{
     display: none;
     width: 220px;
+}
+
+#ennemi1Milieu{
+    display: none;
+    width: 150px;
+}
+
+#ennemi2Milieu{
+    display: none;
+    width: 150px;
+}
+
+#ennemi3Milieu{
+    display: none;
+    width: 150px;
 }
 
 img{
@@ -272,6 +384,22 @@ img{
     padding-bottom: 23px;
 }
 
+#mortBurner{
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    margin-left: 60px;
+    margin-top: 30px;
+    margin-left: 30x;
+    width: 150px;
+    background-color: red;
+    border : solid black ;
+    border-radius: 90px;
+    padding-top: 23px;
+    padding-bottom: 23px;
+    display: none;
+}
+
 #ennemi1:hover .Burner {
     visibility: hidden;
 }
@@ -319,6 +447,21 @@ img{
     border-radius: 90px;
     padding-top: 23px;
     padding-bottom: 23px;
+}
+
+#mortCleaner{
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    margin-left: 60px;
+    margin-top: 30px;
+    width: 150px;
+    background-color: red;
+    border : solid black ;
+    border-radius: 90px;
+    padding-top: 23px;
+    padding-bottom: 23px;
+    display: none;
 }
 
 #ennemi2:hover .Cleaner {
@@ -373,6 +516,22 @@ img{
 
 #ennemi3:hover .Hurler {
     visibility: hidden;
+}
+
+#mortHurler{
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    margin-left: 60px;
+    margin-top: 30px;
+    margin-left: 30x;
+    width: 150px;
+    background-color: red;
+    border : solid black ;
+    border-radius: 90px;
+    padding-top: 23px;
+    padding-bottom: 23px;
+    display: none;  
 }
 
 /* Ici, j'initialise la partie basse de mon interface, l'affichage des noms des héros, éléments cliquables pour le choix du jouer, leurs points de mana et leurs points de vie */
@@ -555,11 +714,11 @@ img{
     color: rgb(255, 0, 0);
 }
 
-.special #specialApres, .special:hover #specialAvant {
+#special #specialApres, #special:hover #specialAvant {
     display : none;
 }
 
-.special:hover #specialApres {
+#special:hover #specialApres {
     display : block;
     color: rgb(255, 0, 0);
     font-size: 30px;

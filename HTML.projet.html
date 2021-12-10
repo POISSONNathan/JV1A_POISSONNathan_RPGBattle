@@ -9,20 +9,40 @@
 
         <div id="règles">
             <div id="titreRègles"><strong><u>Règles du jeu / Comment jouer :</u></strong></div>
-            <div id="Règles">
+            <div id="reglesEcrites">
                 <strong><u>Objectif :</u></strong> tuer les 3 ennemis<br><br>
                 Faites un choix pour chaque héros parmis 3 actions :<br>
-                - Attaquer ; <br>
-                - Se Défendre ; <br>
+                - Attaquer ; (chaque attaque inflige entre 10 et 20 dégats) <br>
+                - Se Défendre ; (divise les dégats subis lors de la manche par 2)<br>
                 - Attaque spéciale (spécifique à chacun des personnages)<br>
+                Si un héro a plus de mana, il ne peut plus faire son attaque spécial.<br>
                 Vous attaquez vos ennemis aléatoirement parmis les 3 présents sur la map.<br>
-                Vous perdez des points de mana spécifique à chaque actions.<br>
                 Après avoir attaqué avec vos 4 personnages, chacun des ennemis riposte 1 par 1 en attaquant aléatoirement vos héros.
             </div>
-            <div id="bouttonJouer">Jouer</div>
+            <div id="boutton">
+                <div id="bouttonVoirSpecial">Voir l'attaque spécial de chaques héros</div>
+                <div id="bouttonJouer">Jouer</div>
+            </div>
+        </div>
+        <div id="finPartie">
+            <div id="titrePartieFinit" >La partie est terminée !</div>
+            <div id ="gagnant">"Place Texte Gagnant"</div>
+        </div>
+        <div id="specialHero">
+            <div id="titreSpecialHero" ><u>Voici le descriptif de chaque attaques spécials pour chacun des personnages :</u></div>
+            <div id ="descriptifs">
+                <div><u><strong>Ulti :</u> (flamme)</strong> <br>
+                Réalise des dégats supérieurs à une attaque normal (entre 30 et 50)</div>
+                <div><u><strong>Light :</u> (impact)</strong> <br>
+                Réalise d'énormes dégats (entre 50 et 70) mais perd en contrepartie entre 10 et 20 point de vie</div>
+                <div><u><strong>Glad :</u> (triomphe)</strong> <br>
+                Glad revient à 100 point de vie mais peut utiliser cette capacité qu'une seule fois par partie</div>
+                <div><u><strong>Ninja :</u> (shuriken)</strong> <br>
+                Réalise des dégats similaires (entre 10 et 25) à tous les ennemis présents </div>
+            </div>
+            <div id="bouttonRetour">Retour</div>
         </div>
         <div id="interface">
-            
             <div class="haut">
             <strong>
                 <div id="boiteDialogue">Début de la partie !</div>
@@ -35,19 +55,19 @@
                 <div id="hero">
                 <strong>
                     <div id="hero1">
-                        <img src="Hero1.png">
+                        <img id="imageHero1" src="Hero1.png">
                         <div class="nomUlti">Ulti</div>
                     </div>
                     <div id="hero2">
-                        <img src="Hero2.png"> 
+                        <img id="imageHero2" src="Hero2.png"> 
                         <div class="nomLight">Light</div>
                     </div>                        
                     <div id="hero3">
-                        <img src="Hero3.png">  
+                        <img id="imageHero3" src="Hero3.png">  
                         <div class="nomGlad">Glad</div>
                     </div>
                     <div id="hero4">
-                        <img src="Hero4.png">  
+                        <img id="imageHero4" src="Hero4.png">  
                         <div class="nomNinja">Ninja</div>
                     </div>
                 </strong>
@@ -59,6 +79,9 @@
                     <img id="hero2Milieu" src="Hero2.png">
                     <img id="hero3Milieu" src="Hero3.png">
                     <img id="hero4Milieu" src="Hero4.png"> 
+                    <img id="ennemi1Milieu" src="Ennemi1.png"> 
+                    <img id="ennemi2Milieu" src="Ennemi2.png"> 
+                    <img id="ennemi3Milieu" src="Ennemi3.png"> 
                 </div>
                 
 
@@ -67,18 +90,21 @@
                     <div id="ennemi1">
                         <img class="E" id="burner" src="Ennemi1.png">
                         <div class="Burner">Burner</div>
-                        <div class ="hpEnnemi1"><div id="hpEnnemi1Image">150</div>hp</div>
+                        <div class ="hpEnnemi1"><div id="hpEnnemi1Image">1</div>hp</div>
                     </div>
+                    <div id="mortBurner">Burner est mort</div>
                     <div id="ennemi2">
-                        <img class="E" src="Ennemi2.png">
+                        <img class="E" id="cleaner" src="Ennemi2.png">
                         <div class="Cleaner">Cleaner</div>
-                        <div class ="hpEnnemi2"><div id="hpEnnemi2Image">150</div>hp</div>
+                        <div class ="hpEnnemi2"><div id="hpEnnemi2Image">113314341</div>hp</div>
                     </div>
+                    <div id="mortCleaner">Cleaner est mort</div>
                     <div id="ennemi3">
-                        <img class="E" src="Ennemi3.png">
+                        <img class="E" id="hurler" src="Ennemi3.png">
                         <div class="Hurler">Hurler</div>
-                        <div class ="hpEnnemi3"><div id="hpEnnemi3Image">150</div>hp</div>
+                        <div class ="hpEnnemi3"><div id="hpEnnemi3Image">1</div>hp</div>
                     </div>
+                    <div id="mortHurler">Hurler est mort</div>
                 </strong>
                 </div>
                 
@@ -112,20 +138,20 @@
                     
                     <div class="hpMana">
                         <div class="hp">
-                        <strong>
+                        <strong>    
                             <div id="titreHP"> <strong><u>HP</u></strong> </div><br>
-                            <div id="hpUltiLigne"> <div id="hpUlti">100</div>/100</div>
-                            <div id="hpLightLigne"> <div id="hpLight">100</div> /100 </div>
-                            <div id="hpGladLigne"> <div id="hpGlad">100</div>/100 </div>
-                            <div id="hpNinjaLigne"> <div id="hpNinja">100</div>/100 </div>
+                            <div id="hpUltiLigne"> <div id="hpUlti">1000</div>/100</div>
+                            <div id="hpLightLigne"> <div id="hpLight">1000</div> /100 </div>
+                            <div id="hpGladLigne"> <div id="hpGlad">1000</div>/100 </div>
+                            <div id="hpNinjaLigne"> <div id="hpNinja">1000</div>/100 </div>
                         </strong>
                         </div>
 
                         <div class="mana">
                         <strong>
                             <div id="titreMana"> <strong><u>MANA</u></strong> </div><br>
-                            <div id="manaUltiLigne"> <div id="manaUlti">100</div>/100</div>
-                            <div id="manaLightLigne"> <div id="manaLight">100</div>/100 </div>
+                            <div id="manaUltiLigne"> <div id="manaUlti">1013310</div>/100</div>
+                            <div id="manaLightLigne"> <div id="manaLight">1313100</div>/100 </div>
                             <div id="manaGladLigne"> <div id="manaGlad">100</div>/100 </div>
                             <div id="manaNinjaLigne"> <div id="manaNinja">100</div>/100 </div>
                         </strong>
@@ -146,7 +172,7 @@
                         <div id="defendreApres">> Se defendre</div>
                     </strong>                 
                     </div>
-                    <div class="special">
+                    <div id="special">
                     <strong>                 
                         <div id="specialAvant">Special (50 Mana)</div>
                         <div id="specialApres">> Special</div>
