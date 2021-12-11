@@ -44,10 +44,7 @@ var decompteDebutPartie = document.getElementById("decompteDebutPartie");
 
 var ordre = document.getElementById("ordre");
 
-var specialAvant = document.getElementById("specialAvant");
-var specialApres = document.getElementById("specialApres");
-
-var bouttonAttaque = document.getElementById("attaqueApres");
+var bouttonAttaque = document.getElementById("attaquerApres");
 var bouttonDefense = document.getElementById("defendreApres");
 var bouttonSpecial = document.getElementById("specialApres");
 
@@ -80,6 +77,8 @@ var imageHero2 = document.getElementById("imageHero2");
 var imageHero3 = document.getElementById("imageHero3");
 var imageHero4 = document.getElementById("imageHero4");
 
+var attaquer = document.getElementById("attaquer");
+var defendre = document.getElementById("defendre");
 var special = document.getElementById("special");
 
 var finPartie = document.getElementById("finPartie");
@@ -88,6 +87,10 @@ var gagnant = document.getElementById("gagnant");
 var mortBurner = document.getElementById("mortBurner")
 var mortCleaner = document.getElementById("mortCleaner");
 var mortHurler = document.getElementById("mortHurler");
+
+var attaquerBlock = document.getElementById("attaquerBlock");
+var defendreBlock = document.getElementById("defendreBlock");
+var specialBlock = document.getElementById("specialBlock");
 
 /* Ici, j'initialise mon boutton pour afficher la description de l'attaque spécial de chaque héros */
 
@@ -150,6 +153,7 @@ function boiteUlti(){
     special.style.visibility = "visible"
     if (manaUlti.innerHTML == 0){
         special.style.visibility = "hidden"
+        specialBlock.style.visibility = "hidden"
     }
 }
 
@@ -190,6 +194,7 @@ function boiteLight(){
     special.style.visibility = "visible"
     if (manaLight.innerHTML == 0){
         special.style.visibility = "hidden"
+        specialBlock.style.visibility = "hidden"
     }
 }
 
@@ -230,6 +235,7 @@ function boiteGlad(){
     special.style.visibility = "visible"
     if (manaGlad.innerHTML == 0){
         special.style.visibility = "hidden"
+        specialBlock.style.visibility = "hidden"
     }
 }
 
@@ -270,6 +276,7 @@ function boiteNinja(){
     special.style.visibility = "visible"
     if (manaNinja.innerHTML == 0){
         special.style.visibility = "hidden"
+        specialBlock.style.visibility = "hidden"
     }
 }
 
@@ -740,12 +747,14 @@ function choixUlti() {
     boiteDialogue.innerHTML = "Ulti fait son choix"
     
     specialAvant.innerHTML = "Flamme (50 Mana)";
-    specialApres.innerHTML = "> Flamme";
+    specialBlock.innerHTML = "Flamme (50 Mana";
+    bouttonSpecial.innerHTML = "> Flamme";
      
     bouttonAttaque.onclick = function(){
         var nomHero = "Ulti"
         attaqueHero(nomHero)
         defenseUlti = 0
+        speUltiBlock = 1
         finHpEnnemi()
         finBoiteUlti()
         choixJoueurSuivantUlti ()
@@ -756,6 +765,7 @@ function choixUlti() {
         boiteDialogue.innerHTML = "Ulti réduit les attaques reçus par les ennemis cette manche"
         ordre.style.visibility = "hidden"
         defenseUlti = 1
+        speUltiBlock = 2
         finBoiteUlti()
         choixJoueurSuivantUlti ()
     }
@@ -808,12 +818,37 @@ function choixUlti() {
         manaUlti.innerHTML = manaUlti.innerHTML - 50
         boiteDialogue.innerHTML = "Ulti utilise Flamme et inflige " + degatsSpecialUlti + " degats à " + nomEnnemiSpecial + " !"
         ordre.style.visibility = "hidden"
-        defenseUlti = 0
+        defenseUlti = 0 
+        speUltiBlock = 3
         finHpEnnemi()
         finBoiteUlti()
         finManaUlti ()  
         choixJoueurSuivantUlti ()      
         setTimeout(finPartieGagnante, 2000)
+    }
+    if (speUltiBlock === 1){
+        attaquer.style.display = "none"
+        attaquerBlock.style.display = "block"
+        defendre.style.display = "block"
+        defendreBlock.style.display = "none"
+        special.style.display = "block"
+        specialBlock.style.display = "none"
+    }
+    if (speUltiBlock === 2){
+        defendre.style.display = "none"
+        defendreBlock.style.display = "block"
+        attaquer.style.display = "block"
+        attaquerBlock.style.display = "none"
+        special.style.display = "block"
+        specialBlock.style.display = "none"
+    }
+    if (speUltiBlock === 3){
+        special.style.display = "none"
+        specialBlock.style.display = "block"
+        attaquer.style.display = "block"
+        attaquerBlock.style.display = "none"
+        defendre.style.display = "block"
+        defendreBlock.style.display = "none"
     }
 }
 
@@ -824,12 +859,17 @@ function choixLight() {
     boiteDialogue.innerHTML = "Light fait son choix"
 
     specialAvant.innerHTML = "Impact (50 Mana)";
-    specialApres.innerHTML = "> Impact";
+    specialBlock.innerHTML = "Impact (50 Mana)";
+    bouttonSpecial.innerHTML = "> Impact";
+
+    special.style.display = "block"
+    specialBlock.style.display = "none"
      
     bouttonAttaque.onclick = function(){
         var nomHero = "Light"
         attaqueHero(nomHero)
         defenseLight = 0
+        speLightBlock = 1
         finHpEnnemi()
         finBoiteLight()
         choixJoueurSuivantLight ()     
@@ -840,6 +880,7 @@ function choixLight() {
         boiteDialogue.innerHTML = "Light réduit les attaques reçus par les ennemis cette manche"
         ordre.style.visibility = "hidden"
         defenseLight = 1
+        speLightBlock = 2
         finBoiteLight()
         choixJoueurSuivantLight ()
     }
@@ -897,12 +938,37 @@ function choixLight() {
         boiteDialogue.innerHTML = "Light utilise Impact et inflige " + degatsSpecialLight + " degats à " + nomEnnemiSpecial + " , et perd " + pvPerdu + " points de vie !"
         ordre.style.visibility = "hidden"
         defenseLight = 0
+        speLightBlock = 3
         finHpLight()
         finHpEnnemi()
         finBoiteLight()
         finManaLight ()    
         choixJoueurSuivantLight ()   
         setTimeout(finPartieGagnante, 2000)
+    }
+    if (speLightBlock === 1){
+        attaquer.style.display = "none"
+        attaquerBlock.style.display = "block"
+        defendre.style.display = "block"
+        defendreBlock.style.display = "none"
+        special.style.display = "block"
+        specialBlock.style.display = "none"
+    }
+    if (speLightBlock === 2){
+        defendre.style.display = "none"
+        defendreBlock.style.display = "block"
+        attaquer.style.display = "block"
+        attaquerBlock.style.display = "none"
+        special.style.display = "block"
+        specialBlock.style.display = "none"
+    }
+    if (speLightBlock === 3){
+        special.style.display = "none"
+        specialBlock.style.display = "block"
+        attaquer.style.display = "block"
+        attaquerBlock.style.display = "none"
+        defendre.style.display = "block"
+        defendreBlock.style.display = "none"
     }
 }
 
@@ -913,12 +979,17 @@ function choixGlad() {
     boiteDialogue.innerHTML = "Glad fait son choix"
 
     specialAvant.innerHTML = "Triomphe (50 Mana)";
-    specialApres.innerHTML = "> Triomphe";
+    specialBlock.innerHTML = "Triomphe (50 Mana)";
+    bouttonSpecial.innerHTML = "> Triomphe";
+
+    special.style.display = "block"
+    specialBlock.style.display = "none"
 
     bouttonAttaque.onclick = function(){
         var nomHero = "Glad"
         attaqueHero(nomHero)
         defenseGlad = 0
+        speGladBlock = 1
         finHpEnnemi()
         finBoiteGlad()
         choixJoueurSuivantGlad ()   
@@ -929,6 +1000,7 @@ function choixGlad() {
         boiteDialogue.innerHTML = "Glad réduit les attaques reçus par les ennemis cette manche"
         ordre.style.visibility = "hidden"
         defenseGlad = 1
+        speGladBlock = 2
         finBoiteGlad()
         choixJoueurSuivantGlad ()
     }
@@ -936,16 +1008,41 @@ function choixGlad() {
     /* Ici, l'attaque spécial de mon héro "Glad" vole des points de vie à un ennemi aléatoire, il lui retire puis de l'ajoute dans ses pv personnels */
 
     bouttonSpecial.onclick = function(){
-        manaGlad.innerHTML = manaGlad.innerHTML - 100
+        manaGlad.innerHTML = manaGlad.innerHTML - 50
         hpGlad.innerHTML = 100
         boiteDialogue.innerHTML = "Glad régénère ses points de vie et revient à 100 !"
         ordre.style.visibility = "hidden"
         defenseGlad = 0
+        speGladBlock = 3
         finHpEnnemi()
         finBoiteGlad()
         finManaGlad ()   
         choixJoueurSuivantGlad ()    
         setTimeout(finPartieGagnante, 2000)
+    }
+    if (speGladBlock === 1){
+        attaquer.style.display = "none"
+        attaquerBlock.style.display = "block"
+        defendre.style.display = "block"
+        defendreBlock.style.display = "none"
+        special.style.display = "block"
+        specialBlock.style.display = "none"
+    }
+    if (speGladBlock === 2){
+        defendre.style.display = "none"
+        defendreBlock.style.display = "block"
+        attaquer.style.display = "block"
+        attaquerBlock.style.display = "none"
+        special.style.display = "block"
+        specialBlock.style.display = "none"
+    }
+    if (speGladBlock === 3){
+        defendre.style.display = "block"
+        defendreBlock.style.display = "none"
+        attaquer.style.display = "block"
+        attaquerBlock.style.display = "none"
+        special.style.display = "none"
+        specialBlock.style.display = "block"
     }
 }
 
@@ -956,12 +1053,17 @@ function choixNinja() {
     boiteDialogue.innerHTML = "Ninja fait son choix"
     
     specialAvant.innerHTML = "Shuriken (50 Mana)";
-    specialApres.innerHTML = "> Shuriken";
+    specialBlock.innerHTML = "Shuriken (50 Mana)";
+    bouttonSpecial.innerHTML = "> Shuriken";
+
+    special.style.display = "block"
+    specialBlock.style.display = "none"
 
     bouttonAttaque.onclick = function(){
         var nomHero = "Ninja"
         attaqueHero(nomHero)
         defenseNinja = 0
+        speNinjalock = 1
         finHpEnnemi()
         finBoiteNinja()
         choixJoueurSuivantNinja ()    
@@ -972,6 +1074,7 @@ function choixNinja() {
         boiteDialogue.innerHTML = "Ninja réduit les attaques reçus par les ennemis cette manche"
         ordre.style.visibility = "hidden"
         defenseNinja = 1
+        speNinjalock = 2
         finBoiteNinja()
         choixJoueurSuivantNinja ()
     }
@@ -989,11 +1092,36 @@ function choixNinja() {
         boiteDialogue.innerHTML = "Ninja utilise Shuriken et inflige " + degatsSpecialNinja + " à chaque ennemis !"
         ordre.style.visibility = "hidden"
         defenseNinja = 0
+        speNinjalock = 3
         finHpEnnemi()
         finBoiteNinja()
         finManaNinja ()     
         choixJoueurSuivantNinja ()   
         setTimeout(finPartieGagnante, 2000)
+    }
+    if (speNinjalock === 1){
+        attaquer.style.display = "none"
+        attaquerBlock.style.display = "block"
+        defendre.style.display = "block"
+        defendreBlock.style.display = "none"
+        special.style.display = "block"
+        specialBlock.style.display = "none"
+    }
+    if (speNinjalock === 2){
+        defendre.style.display = "none"
+        defendreBlock.style.display = "block"
+        attaquer.style.display = "block"
+        attaquerBlock.style.display = "none"
+        special.style.display = "block"
+        specialBlock.style.display = "none"
+    }
+    if (speNinjalock === 3){
+        defendre.style.display = "block"
+        defendreBlock.style.display = "none"
+        attaquer.style.display = "block"
+        attaquerBlock.style.display = "none"
+        special.style.display = "none"
+        specialBlock.style.display = "block"
     }
 }
 

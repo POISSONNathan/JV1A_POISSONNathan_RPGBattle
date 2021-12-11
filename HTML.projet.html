@@ -36,7 +36,7 @@
                 <div><u><strong>Light :</u> (impact)</strong> <br>
                 Réalise d'énormes dégats (entre 50 et 70) mais perd en contrepartie entre 10 et 20 point de vie</div>
                 <div><u><strong>Glad :</u> (triomphe)</strong> <br>
-                Glad revient à 100 point de vie mais peut utiliser cette capacité qu'une seule fois par partie</div>
+                Glad revient à 100 point de vie</div>
                 <div><u><strong>Ninja :</u> (shuriken)</strong> <br>
                 Réalise des dégats similaires (entre 10 et 25) à tous les ennemis présents </div>
             </div>
@@ -90,19 +90,19 @@
                     <div id="ennemi1">
                         <img class="E" id="burner" src="Ennemi1.png">
                         <div class="Burner">Burner</div>
-                        <div class ="hpEnnemi1"><div id="hpEnnemi1Image">1</div>hp</div>
+                        <div class ="hpEnnemi1"><div id="hpEnnemi1Image">200</div>hp</div>
                     </div>
                     <div id="mortBurner">Burner est mort</div>
                     <div id="ennemi2">
                         <img class="E" id="cleaner" src="Ennemi2.png">
                         <div class="Cleaner">Cleaner</div>
-                        <div class ="hpEnnemi2"><div id="hpEnnemi2Image">113314341</div>hp</div>
+                        <div class ="hpEnnemi2"><div id="hpEnnemi2Image">200</div>hp</div>
                     </div>
                     <div id="mortCleaner">Cleaner est mort</div>
                     <div id="ennemi3">
                         <img class="E" id="hurler" src="Ennemi3.png">
                         <div class="Hurler">Hurler</div>
-                        <div class ="hpEnnemi3"><div id="hpEnnemi3Image">1</div>hp</div>
+                        <div class ="hpEnnemi3"><div id="hpEnnemi3Image">200</div>hp</div>
                     </div>
                     <div id="mortHurler">Hurler est mort</div>
                 </strong>
@@ -150,8 +150,8 @@
                         <div class="mana">
                         <strong>
                             <div id="titreMana"> <strong><u>MANA</u></strong> </div><br>
-                            <div id="manaUltiLigne"> <div id="manaUlti">1013310</div>/100</div>
-                            <div id="manaLightLigne"> <div id="manaLight">1313100</div>/100 </div>
+                            <div id="manaUltiLigne"> <div id="manaUlti">100</div>/100</div>
+                            <div id="manaLightLigne"> <div id="manaLight">100</div>/100 </div>
                             <div id="manaGladLigne"> <div id="manaGlad">100</div>/100 </div>
                             <div id="manaNinjaLigne"> <div id="manaNinja">100</div>/100 </div>
                         </strong>
@@ -160,24 +160,27 @@
                 </div>
               
                 <div id="ordre"> 
-                    <div class="attaquer">
+                    <div id="attaquer">
                     <strong>                 
-                        <div class="avant">Attaquer</div>
-                        <div id="attaqueApres">> Attaquer </div>
+                        <div id="attaquerAvant">Attaquer</div>
+                        <div id="attaquerApres">> Attaquer </div>
                     </strong>                 
                     </div>
-                    <div class="defendre">
+                    <div id="attaquerBlock"><strong>Attaquer</strong></div>               
+                    <div id="defendre">
                     <strong>                 
-                        <div class="avant">Se defendre</div>
+                        <div id="defendreAvant">Se defendre</div>
                         <div id="defendreApres">> Se defendre</div>
                     </strong>                 
                     </div>
+                    <div id="defendreBlock"><strong>Se defendre</strong></div>               
                     <div id="special">
                     <strong>                 
                         <div id="specialAvant">Special (50 Mana)</div>
                         <div id="specialApres">> Special</div>
                     </strong>                 
-                    </div>                  
+                    </div>    
+                    <div id="specialBlock"><strong>Special (50 Mana)</strong></div>               
                 </div>
             </div>
         </div>

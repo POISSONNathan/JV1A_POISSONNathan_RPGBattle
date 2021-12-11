@@ -690,11 +690,11 @@ img{
     visibility: hidden;;
 }
 
-.attaquer #attaqueApres, .attaquer:hover .avant {
+#attaquer #attaquerApres, #attaquer:hover #attaquerAvant {
     display : none;
 }
 
-.attaquer:hover #attaqueApres {
+#attaquer:hover #attaquerApres {
     display : block;
     color: rgb(255, 0, 0);
     font-size: 30px;
@@ -702,11 +702,11 @@ img{
     color: rgb(255, 0, 0);
 }
 
-.defendre #defendreApres, .defendre:hover .avant {
+#defendre #defendreApres, #defendre:hover #defendreAvant {
     display : none;
 }
 
-.defendre:hover #defendreApres {
+#defendre:hover #defendreApres {
     display : block;
     color: rgb(255, 0, 0);
     font-size: 30px;
@@ -724,4 +724,19 @@ img{
     font-size: 30px;
     text-decoration: underline;
     color: rgb(255, 0, 0);
+}
+
+#attaquerBlock{
+    background-color: grey;
+    display: none;
+}
+
+#defendreBlock{
+    background-color: grey;
+    display: none;
+}
+
+#specialBlock{
+    background-color: grey;
+    display: none;
 }
