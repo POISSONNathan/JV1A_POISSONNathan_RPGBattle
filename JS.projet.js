@@ -688,6 +688,35 @@ function finPartiePerdante(){
     }
 }
 
+/* Ici, j'initialise les fonctions afin de de ne pas pouvoir utiliser une action 2 manches d'affilés */
+
+function attaquerGrise(){
+    attaquer.style.display = "none"
+    attaquerBlock.style.display = "block"
+    defendre.style.display = "block"
+    defendreBlock.style.display = "none"
+    special.style.display = "block"
+    specialBlock.style.display = "none"
+}
+
+function defenseGrise(){
+    defendre.style.display = "none"
+    defendreBlock.style.display = "block"
+    attaquer.style.display = "block"
+    attaquerBlock.style.display = "none"
+    special.style.display = "block"
+    specialBlock.style.display = "none"
+}
+
+function specialeGrise(){
+    special.style.display = "none"
+    specialBlock.style.display = "block"
+    attaquer.style.display = "block"
+    attaquerBlock.style.display = "none"
+    defendre.style.display = "block"
+    defendreBlock.style.display = "none"
+}
+
 /* Ici, j'initialise la fonction d'attaque de chacun de mes héros */
 
 function attaqueHero(nomHero){
@@ -827,28 +856,13 @@ function choixUlti() {
         setTimeout(finPartieGagnante, 2000)
     }
     if (speUltiBlock === 1){
-        attaquer.style.display = "none"
-        attaquerBlock.style.display = "block"
-        defendre.style.display = "block"
-        defendreBlock.style.display = "none"
-        special.style.display = "block"
-        specialBlock.style.display = "none"
+        attaquerGrise ()
     }
     if (speUltiBlock === 2){
-        defendre.style.display = "none"
-        defendreBlock.style.display = "block"
-        attaquer.style.display = "block"
-        attaquerBlock.style.display = "none"
-        special.style.display = "block"
-        specialBlock.style.display = "none"
+        defenseGrise ()
     }
     if (speUltiBlock === 3){
-        special.style.display = "none"
-        specialBlock.style.display = "block"
-        attaquer.style.display = "block"
-        attaquerBlock.style.display = "none"
-        defendre.style.display = "block"
-        defendreBlock.style.display = "none"
+        attaquerGrise ()
     }
 }
 
@@ -947,28 +961,13 @@ function choixLight() {
         setTimeout(finPartieGagnante, 2000)
     }
     if (speLightBlock === 1){
-        attaquer.style.display = "none"
-        attaquerBlock.style.display = "block"
-        defendre.style.display = "block"
-        defendreBlock.style.display = "none"
-        special.style.display = "block"
-        specialBlock.style.display = "none"
+        attaquerGrise ()
     }
     if (speLightBlock === 2){
-        defendre.style.display = "none"
-        defendreBlock.style.display = "block"
-        attaquer.style.display = "block"
-        attaquerBlock.style.display = "none"
-        special.style.display = "block"
-        specialBlock.style.display = "none"
+        defenseGrise ()
     }
     if (speLightBlock === 3){
-        special.style.display = "none"
-        specialBlock.style.display = "block"
-        attaquer.style.display = "block"
-        attaquerBlock.style.display = "none"
-        defendre.style.display = "block"
-        defendreBlock.style.display = "none"
+        specialeGrise()
     }
 }
 
@@ -1021,28 +1020,13 @@ function choixGlad() {
         setTimeout(finPartieGagnante, 2000)
     }
     if (speGladBlock === 1){
-        attaquer.style.display = "none"
-        attaquerBlock.style.display = "block"
-        defendre.style.display = "block"
-        defendreBlock.style.display = "none"
-        special.style.display = "block"
-        specialBlock.style.display = "none"
+        attaquerGrise ()
     }
     if (speGladBlock === 2){
-        defendre.style.display = "none"
-        defendreBlock.style.display = "block"
-        attaquer.style.display = "block"
-        attaquerBlock.style.display = "none"
-        special.style.display = "block"
-        specialBlock.style.display = "none"
+        defenseGrise ()
     }
     if (speGladBlock === 3){
-        defendre.style.display = "block"
-        defendreBlock.style.display = "none"
-        attaquer.style.display = "block"
-        attaquerBlock.style.display = "none"
-        special.style.display = "none"
-        specialBlock.style.display = "block"
+        specialeGrise ()
     }
 }
 
@@ -1100,28 +1084,13 @@ function choixNinja() {
         setTimeout(finPartieGagnante, 2000)
     }
     if (speNinjalock === 1){
-        attaquer.style.display = "none"
-        attaquerBlock.style.display = "block"
-        defendre.style.display = "block"
-        defendreBlock.style.display = "none"
-        special.style.display = "block"
-        specialBlock.style.display = "none"
+        attaquerGrise ()
     }
     if (speNinjalock === 2){
-        defendre.style.display = "none"
-        defendreBlock.style.display = "block"
-        attaquer.style.display = "block"
-        attaquerBlock.style.display = "none"
-        special.style.display = "block"
-        specialBlock.style.display = "none"
+        defenseGrise ()
     }
     if (speNinjalock === 3){
-        defendre.style.display = "block"
-        defendreBlock.style.display = "none"
-        attaquer.style.display = "block"
-        attaquerBlock.style.display = "none"
-        special.style.display = "none"
-        specialBlock.style.display = "block"
+        attaquerGrise ()
     }
 }
 
