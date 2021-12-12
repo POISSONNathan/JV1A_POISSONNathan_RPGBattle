@@ -1,6 +1,6 @@
 /* Ici, j'initialise l'affichage des règles en début de jeu */
 
-#règles{
+#règles{ /* page de règle au début de partie */
     border : solid black ;
     width: 900px;
     height: 700px;
@@ -200,37 +200,37 @@
     padding-top: 100px;
 }
 
-#hero1Milieu{
+#hero1Milieu{ /* image de mon hero ulti au centre en display none afin de la faire apparaitre lorsqu'il attaque */
     display: none;
     width: 220px;
 }
 
-#hero2Milieu{
+#hero2Milieu{ /* image de mon hero light au centre en display none afin de la faire apparaitre lorsqu'il attaque */
     display: none;
     width: 220px;
 }
 
-#hero3Milieu{
+#hero3Milieu{ /* image de mon hero glad au centre en display none afin de la faire apparaitre lorsqu'il attaque */
     display: none;
     width: 220px;
 }
 
-#hero4Milieu{
+#hero4Milieu{ /* image de mon hero ninja au centre en display none afin de la faire apparaitre lorsqu'il attaque */
     display: none;
     width: 220px;
 }
 
-#ennemi1Milieu{
+#ennemi1Milieu{ /* image de mon ennemi burner au centre en display none afin de la faire apparaitre lorsqu'il attaque */
     display: none;
     width: 150px;
 }
 
-#ennemi2Milieu{
+#ennemi2Milieu{ /* image de mon ennemi cleaner au centre en display none afin de la faire apparaitre lorsqu'il attaque */ 
     display: none;
     width: 150px;
 }
 
-#ennemi3Milieu{
+#ennemi3Milieu{ /* image de mon ennemi hurler au centre en display none afin de la faire apparaitre lorsqu'il attaque */
     display: none;
     width: 150px;
 }
@@ -384,7 +384,7 @@ img{
     padding-bottom: 23px;
 }
 
-#mortBurner{
+#mortBurner{ /* indication que mon ennemi Burner est mort grâce à un texte */
     font-size: 18px;
     color: black;
     text-align: center;
@@ -449,7 +449,7 @@ img{
     padding-bottom: 23px;
 }
 
-#mortCleaner{
+#mortCleaner{ /* indication que mon ennemi Cleaner est mort grâce à un texte */
     font-size: 18px;
     color: black;
     text-align: center;
@@ -464,7 +464,7 @@ img{
     display: none;
 }
 
-#ennemi2:hover .Cleaner {
+#ennemi2:hover .Cleaner { 
     visibility: hidden;
 }
 
@@ -518,7 +518,7 @@ img{
     visibility: hidden;
 }
 
-#mortHurler{
+#mortHurler{ /* indication que mon ennemi Hurler est mort grâce à un texte */
     font-size: 18px;
     color: black;
     text-align: center;
@@ -541,7 +541,7 @@ img{
     justify-content: space-around;
 }
 
-.personnages {
+.personnages { /* mise en place des ma boite de personnages, des noms, des points de vie et de la mana de chacun */
     border : solid rgb(0, 48, 6) ; 
     padding:10px ; 
     border-radius: 7px ; 
@@ -559,7 +559,7 @@ img{
     display : block;
 }
 
-#apresUlti {
+#apresUlti { /* modification du texte en pour montrer que le perso Ulti est en train de faire un choix */
     display : none;
     color: rgb(21, 255, 0);
     font-size: 30px;
@@ -570,7 +570,7 @@ img{
     display : block;
 }
 
-#apresLight {
+#apresLight { /* modification du texte en pour montrer que le perso Light est en train de faire un choix */
     display : none;
     color: rgb(21, 255, 0);
     font-size: 30px;
@@ -581,7 +581,7 @@ img{
     display : block;
 }
 
-#apresGlad {
+#apresGlad { /* modification du texte en pour montrer que le perso Glad est en train de faire un choix */
     display : none;
     color: rgb(21, 255, 0);
     font-size: 30px;
@@ -592,7 +592,7 @@ img{
     display : block;
 }
 
-#apresNinja {
+#apresNinja { /* modification du texte en pour montrer que le perso Ninja est en train de faire un choix */
     display : none;
     color: rgb(21, 255, 0);
     font-size: 30px;
@@ -690,11 +690,11 @@ img{
     visibility: hidden;;
 }
 
-#attaquer #attaquerApres, #attaquer:hover #attaquerAvant {
+#attaquer #attaquerApres, #attaquer:hover #attaquerAvant { /* modification du texte en passant la souris sur le boutton attaque */
     display : none;
 }
 
-#attaquer:hover #attaquerApres {
+#attaquer:hover #attaquerApres { /* modification du texte en passant la souris sur le boutton attaque */
     display : block;
     color: rgb(255, 0, 0);
     font-size: 30px;
@@ -702,11 +702,11 @@ img{
     color: rgb(255, 0, 0);
 }
 
-#defendre #defendreApres, #defendre:hover #defendreAvant {
+#defendre #defendreApres, #defendre:hover #defendreAvant { /* modification du texte en passant la souris sur le boutton defense */
     display : none;
 }
 
-#defendre:hover #defendreApres {
+#defendre:hover #defendreApres { /* modification du texte en passant la souris sur le boutton defense */
     display : block;
     color: rgb(255, 0, 0);
     font-size: 30px;
@@ -714,11 +714,11 @@ img{
     color: rgb(255, 0, 0);
 }
 
-#special #specialApres, #special:hover #specialAvant {
+#special #specialApres, #special:hover #specialAvant { /* modification du texte en passant la souris sur le boutton spécial */
     display : none;
 }
 
-#special:hover #specialApres {
+#special:hover #specialApres { /* modification du texte en passant la souris sur le boutton spécial */
     display : block;
     color: rgb(255, 0, 0);
     font-size: 30px;
@@ -726,17 +726,17 @@ img{
     color: rgb(255, 0, 0);
 }
 
-#attaquerBlock{
+#attaquerBlock{ /* modification du texte en d'attaque pour montrer que l'action d'attaque est inutilisable la manche suivante */
     background-color: grey;
     display: none;
 }
 
-#defendreBlock{
+#defendreBlock{ /* modification du texte en d'attaque pour montrer que l'action de defense est inutilisable la manche suivante */
     background-color: grey;
     display: none;
 }
 
-#specialBlock{
+#specialBlock{ /* modification du texte en d'attaque pour montrer que l'action d'attaque spéciale est inutilisable la manche suivante */
     background-color: grey;
     display: none;
 }

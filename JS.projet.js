@@ -139,12 +139,12 @@ function decompte(){
     setTimeout( function (){
         decompteDebutPartie.style.display = "none"
         choixUlti()
-    },4000); 
+    },5000); 
 }
 
 /* Ici, j'initialise les fonctions qui me seront utiles pour mon héro "Ulti" ex : Disparition à 0 hp du perso, changement de texte à 0 mana et si mon héro meurt */
 
-function boiteUlti(){
+function boiteUlti(){ /* fonction d'apparition de la boite de mon héro ulti */
     ordre.style.visibility = "visible";
     avantUlti.style.display ="none";
     texteUtli.style.display ="block";
@@ -157,7 +157,7 @@ function boiteUlti(){
     }
 }
 
-function finBoiteUlti(){
+function finBoiteUlti(){ /* fonction de fin de la boite de mon héro ulti */
     ordre.style.visibility = "hidden";
     avantUlti.style.display ="block";
     texteUtli.style.display ="none";
@@ -166,13 +166,13 @@ function finBoiteUlti(){
     special.style.visibility = "hidden"
 }
 
-function finManaUlti (){
+function finManaUlti (){ /* fonction qui indique que mon héro ulti a plus de mana */
     if (manaUlti.innerHTML == 0){
         manaUltiLigne.innerHTML ="0 mana"
     }
 }
 
-function finHpUlti (){
+function finHpUlti (){ /* fonction qui indique que mon héro ulti est mort, il disparait et c'est écrit à la place des ses points de vies */
     if (hpUlti.innerHTML <= 0){
         hpUltiLigne.innerHTML = "Ulti est mort  "
         manaUltiLigne.style.visibility = "hidden"
@@ -185,7 +185,7 @@ function finHpUlti (){
 
 /* Ici, j'initialise les fonctions qui me seront utiles pour mon héro "Light" ex : Disparition à 0 hp du perso, changement de texte à 0 mana et si mon héro meurt */
 
-function boiteLight(){
+function boiteLight(){ /* fonction d'apparition de la boite de mon héro light */
     ordre.style.visibility = "visible";
     avantLight.style.display ="none";
     texteLight.style.display ="block";
@@ -198,7 +198,7 @@ function boiteLight(){
     }
 }
 
-function finBoiteLight(){
+function finBoiteLight(){ /* fonction de fin de la boite de mon héro light */
     ordre.style.visibility = "hidden";
     avantLight.style.display ="block";
     texteLight.style.display ="none";
@@ -207,13 +207,13 @@ function finBoiteLight(){
     special.style.visibility = "hidden"
 }
 
-function finManaLight (){
+function finManaLight (){ /* fonction qui indique que mon héro light a plus de mana */
     if (manaLight.innerHTML == 0){
         manaLightLigne.innerHTML ="0 mana"
     }
 }
 
-function finHpLight (){
+function finHpLight (){ /* fonction qui indique que mon héro light est mort, il disparait et c'est écrit à la place des ses points de vies */
     if (hpLight.innerHTML <= 0){
         hpLightLigne.innerHTML ="Light est mort"
         manaLightLigne.style.visibility = "hidden"
@@ -226,7 +226,7 @@ function finHpLight (){
 
 /* Ici, j'initialise les fonctions qui me seront utiles pour mon héro "Glad" ex : Disparition à 0 hp du perso, changement de texte à 0 mana et si mon héro meurt */
 
-function boiteGlad(){
+function boiteGlad(){ /* fonction d'apparition de la boite de mon héro glad */
     ordre.style.visibility = "visible";
     avantGlad.style.display ="none";
     texteGlad.style.display ="block";
@@ -239,7 +239,7 @@ function boiteGlad(){
     }
 }
 
-function finBoiteGlad(){
+function finBoiteGlad(){ /* fonction de fin de la boite de mon héro glad */
     ordre.style.visibility = "hidden";
     avantGlad.style.display ="block";
     texteGlad.style.display ="none";
@@ -248,13 +248,13 @@ function finBoiteGlad(){
     special.style.visibility = "hidden"
 }
 
-function finManaGlad (){
+function finManaGlad (){ /* fonction qui indique que mon héro glad a plus de mana */
     if (manaGlad.innerHTML == 0){
         manaGladLigne.innerHTML ="0 mana"
     }
 }
 
-function finHpGlad (){
+function finHpGlad (){ /* fonction qui indique que mon héro glad est mort, il disparait et c'est écrit à la place des ses points de vies */
     if (hpGlad.innerHTML <= 0){
         hpGladLigne.innerHTML ="Glad est mort"
         manaGladLigne.style.visibility = "hidden"
@@ -267,7 +267,7 @@ function finHpGlad (){
 
 /* Ici, j'initialise les fonctions qui me seront utiles pour mon héro "Ninja" ex : Disparition à 0 hp du perso, changement de texte à 0 mana et si mon héro meurt */
 
-function boiteNinja(){
+function boiteNinja(){ /* fonction d'apparition de la boite de mon héro ninja */
     ordre.style.visibility = "visible";
     avantNinja.style.display ="none";
     texteNinja.style.display ="block";
@@ -280,7 +280,7 @@ function boiteNinja(){
     }
 }
 
-function finBoiteNinja(){
+function finBoiteNinja(){ /* fonction de fin de la boite de mon héro ninja */
     ordre.style.visibility = "hidden";
     avantNinja.style.display ="block";
     texteNinja.style.display ="none";
@@ -289,13 +289,13 @@ function finBoiteNinja(){
     special.style.visibility = "hidden"
 }
 
-function finManaNinja (){
+function finManaNinja (){ /* fonction qui indique que mon héro ninja a plus de mana */
     if (manaNinja.innerHTML == 0){
         manaNinjaLigne.innerHTML ="0 mana"
     }
 }
 
-function finHpNinja (){
+function finHpNinja (){ /* fonction qui indique que mon héro ninja est mort, il disparait et c'est écrit à la place des ses points de vies */
     if (hpNinja.innerHTML <= 0){
         hpNinjaLigne.innerHTML ="Ninja est mort"
         manaNinjaLigne.style.visibility = "hidden"
@@ -308,7 +308,7 @@ function finHpNinja (){
 
 /* Ici, j'initialise les fonctions qui me seront utiles pour mes ennemis "Burner", "Cleaner" et "Hurler" ex : Disparition à 0 hp de l'ennemi */
 
-function finHpBurner (){
+function finHpBurner (){ /* fonction qui fait disparaitre mon ennemi burner */
     if (hpEnnemi1.innerHTML <= 0){
         setTimeout( function (){
             ennemi1.style.display = "none"
@@ -317,7 +317,7 @@ function finHpBurner (){
     }
 }
 
-function finHpCleaner (){
+function finHpCleaner (){ /* fonction qui fait disparaitre mon ennemi cleaner */
     if (hpEnnemi2.innerHTML <= 0){
         setTimeout( function (){
             ennemi2.style.display = "none"
@@ -326,7 +326,7 @@ function finHpCleaner (){
     }
 }
 
-function finHpHurler (){
+function finHpHurler (){ /* fonction qui fait disparaitre mon ennemi hurler */
     if (hpEnnemi3.innerHTML <= 0){
         setTimeout( function (){
             ennemi3.style.display = "none"
@@ -337,7 +337,7 @@ function finHpHurler (){
 
 /* Ici, j'initialise des fonctions qui me permettent de mettre en valeur les ennemis visés par mes héros lors des actions */
 
-function bordureEnnemi1() {
+function bordureEnnemi1() { /* fonction qui met en valeur mon ennemi burner quand il est attaqué */
     setTimeout( function (){
         imageEnnemi1.style.backgroundColor= "red";
     },0000);
@@ -346,7 +346,7 @@ function bordureEnnemi1() {
     },2000);
 }
 
-function bordureEnnemi2() {
+function bordureEnnemi2() { /* fonction qui met en valeur mon ennemi cleaner quand il est attaqué */
     setTimeout( function (){
         imageEnnemi2.style.backgroundColor= "red";
     },0000);
@@ -355,7 +355,7 @@ function bordureEnnemi2() {
     },2000);
 }
 
-function bordureEnnemi3() {
+function bordureEnnemi3() { /* fonction qui met en valeur mon ennemi hurler quand il est attaqué */
     setTimeout( function (){
         imageEnnemi3.style.backgroundColor= "red";
     },0000);
@@ -366,7 +366,7 @@ function bordureEnnemi3() {
 
 /* Ici, j'initialise des fonctions qui me permettent de mettre en valeur mes héros visés par les ennemis lors des actions de ripostes */
 
-function bordureHero1() {
+function bordureHero1() { /* fonction qui met en valeur mon hero  ulti quand il est attaqué */
     setTimeout( function (){
         imageHero1.style.backgroundColor= "red";
     },0000);
@@ -375,7 +375,7 @@ function bordureHero1() {
     },2000);
 }
 
-function bordureHero2() {
+function bordureHero2() { /* fonction qui met en valeur mon hero  light quand il est attaqué */
     setTimeout( function (){
         imageHero2.style.backgroundColor= "red";
     },0000);
@@ -384,7 +384,7 @@ function bordureHero2() {
     },2000);
 }
 
-function bordureHero3() {
+function bordureHero3() { /* fonction qui met en valeur mon hero  cleaner quand il est attaqué */
     setTimeout( function (){
         imageHero3.style.backgroundColor= "red";
     },0000);
@@ -393,7 +393,7 @@ function bordureHero3() {
     },2000);
 }
 
-function bordureHero4() {
+function bordureHero4() { /* fonction qui met en valeur mon hero  hurler quand il est attaqué */
     setTimeout( function (){
         imageHero4.style.backgroundColor= "red";
     },0000);
@@ -404,7 +404,7 @@ function bordureHero4() {
 
 /* Ici, j'initialise des fonctions font disparaître les héros et les ennemis lorsqu'ils ont 0 hp ou moins */
 
-function finHpEnnemi(){
+function finHpEnnemi(){ 
     finHpBurner ()
     finHpCleaner ()
     finHpHurler ()
@@ -419,7 +419,7 @@ function finHpHero(){
 
 /* Ici, j'initialise les fonctions de mes ennemis afin de les mettre en valeurs lorsqu'ils attaquent */
 
-function boiteBurner(){
+function boiteBurner(){ /* fonction d'apparition de la boite de mon ennemi burner */
     ennemi1Milieu.style.display = "block"
     ennemi1.style.visibility = "hidden"
     setTimeout( function (){
@@ -428,7 +428,7 @@ function boiteBurner(){
     },2000);
 }
 
-function boiteCleaner(){
+function boiteCleaner(){ /* fonction d'apparition de la boite de mon ennemi cleaner */
     ennemi2Milieu.style.display = "block"
     ennemi2.style.visibility = "hidden"
     setTimeout( function (){
@@ -437,7 +437,7 @@ function boiteCleaner(){
     },2000);
 }
 
-function boiteHurler (){
+function boiteHurler (){ /* fonction d'apparition de la boite de mon ennemi hurler */
     ennemi3Milieu.style.display = "block"
     ennemi3.style.visibility = "hidden"
     setTimeout( function (){
@@ -690,7 +690,7 @@ function finPartiePerdante(){
 
 /* Ici, j'initialise les fonctions afin de de ne pas pouvoir utiliser une action 2 manches d'affilés */
 
-function attaquerGrise(){
+function attaquerGrise(){ 
     attaquer.style.display = "none"
     attaquerBlock.style.display = "block"
     defendre.style.display = "block"
@@ -724,8 +724,8 @@ function attaqueHero(nomHero){
     var min=1; 
     var max=4;  
 
-    var choixAttaqueRandom = Math.floor(Math.random() * (max - min)) + min; 
-    var degatsAttaqueUlti =  Math.floor(Math.random() * 10 + 10)
+    var choixAttaqueRandom = Math.floor(Math.random() * (max - min)) + min; /* pour choisir un ennemi aléatoire */
+    var degatsAttaqueUlti =  Math.floor(Math.random() * 10 + 10) /* pour que mes héros font des dégats aléatoire entre 10 et 20 quand ils attaquent */
     var nomEnnemiAttaque
 
     if (choixAttaqueRandom === 1){
@@ -765,7 +765,7 @@ function attaqueHero(nomHero){
         hpEnnemi3.innerHTML = hpEnnemi3.innerHTML - degatsAttaqueUlti
         bordureEnnemi3()
     }
-    boiteDialogue.innerHTML = nomHero + " attaque " + nomEnnemiAttaque + " et lui inflige " + degatsAttaqueUlti + " degats !"
+    boiteDialogue.innerHTML = nomHero + " attaque " + nomEnnemiAttaque + " et lui inflige " + degatsAttaqueUlti + " degats !" /* dialogue de l'action d'attaque */
     ordre.style.visibility = "hidden"
 }
 
@@ -775,11 +775,14 @@ function choixUlti() {
     boiteUlti()
     boiteDialogue.innerHTML = "Ulti fait son choix"
     
-    specialAvant.innerHTML = "Flamme (50 Mana)";
+    specialAvant.innerHTML = "Flamme (50 Mana)"; /* je modifie le texte de l'attaque spécial par rapport à ce héro */
     specialBlock.innerHTML = "Flamme (50 Mana";
     bouttonSpecial.innerHTML = "> Flamme";
+
+    special.style.display = "block"
+    specialBlock.style.display = "none"
      
-    bouttonAttaque.onclick = function(){
+    bouttonAttaque.onclick = function(){ /* attaque de mon hero */
         var nomHero = "Ulti"
         attaqueHero(nomHero)
         defenseUlti = 0
@@ -790,8 +793,8 @@ function choixUlti() {
         setTimeout(finPartieGagnante, 2000)
     }
     
-    bouttonDefense.onclick = function(){
-        boiteDialogue.innerHTML = "Ulti réduit les attaques reçus par les ennemis cette manche"
+    bouttonDefense.onclick = function(){ /* defense de mon héro */
+        boiteDialogue.innerHTML = "Ulti réduit les attaques reçus par les ennemis cette manche" /* dialogue de la defense */
         ordre.style.visibility = "hidden"
         defenseUlti = 1
         speUltiBlock = 2
@@ -806,7 +809,7 @@ function choixUlti() {
     var degatsSpecialUlti =  Math.floor(Math.random() * 20 + 30)
     var nomEnnemiSpecial
 
-    bouttonSpecial.onclick = function(){
+    bouttonSpecial.onclick = function(){ /* attaque de mon hero */
         if (choixSpecialRandom === 1){
             if (hpEnnemi1.innerHTML <= 0){
                 choixSpecialRandom = 2
@@ -829,7 +832,7 @@ function choixUlti() {
             }
         }
 
-        if (choixSpecialRandom === 1){
+        if (choixSpecialRandom === 1){ 
             nomEnnemiSpecial = "Burner"
             hpEnnemi1.innerHTML = hpEnnemi1.innerHTML - degatsSpecialUlti
             bordureEnnemi1()
@@ -845,7 +848,7 @@ function choixUlti() {
             bordureEnnemi3()
         }
         manaUlti.innerHTML = manaUlti.innerHTML - 50
-        boiteDialogue.innerHTML = "Ulti utilise Flamme et inflige " + degatsSpecialUlti + " degats à " + nomEnnemiSpecial + " !"
+        boiteDialogue.innerHTML = "Ulti utilise Flamme et inflige " + degatsSpecialUlti + " degats à " + nomEnnemiSpecial + " !" /* dialogue de l'action spéciale */
         ordre.style.visibility = "hidden"
         defenseUlti = 0 
         speUltiBlock = 3
@@ -862,7 +865,7 @@ function choixUlti() {
         defenseGrise ()
     }
     if (speUltiBlock === 3){
-        attaquerGrise ()
+        specialeGrise ()
     }
 }
 
@@ -872,14 +875,14 @@ function choixLight() {
     boiteLight()
     boiteDialogue.innerHTML = "Light fait son choix"
 
-    specialAvant.innerHTML = "Impact (50 Mana)";
+    specialAvant.innerHTML = "Impact (50 Mana)"; /* je modifie le texte de l'attaque spécial par rapport à ce héro */
     specialBlock.innerHTML = "Impact (50 Mana)";
     bouttonSpecial.innerHTML = "> Impact";
 
     special.style.display = "block"
     specialBlock.style.display = "none"
      
-    bouttonAttaque.onclick = function(){
+    bouttonAttaque.onclick = function(){ /* attaque de mon hero */
         var nomHero = "Light"
         attaqueHero(nomHero)
         defenseLight = 0
@@ -890,8 +893,8 @@ function choixLight() {
         setTimeout(finPartieGagnante, 2000)
     }
     
-    bouttonDefense.onclick = function(){
-        boiteDialogue.innerHTML = "Light réduit les attaques reçus par les ennemis cette manche"
+    bouttonDefense.onclick = function(){ /* defense de mon hero */
+        boiteDialogue.innerHTML = "Light réduit les attaques reçus par les ennemis cette manche" /* dialogue de la defense */
         ordre.style.visibility = "hidden"
         defenseLight = 1
         speLightBlock = 2
@@ -909,7 +912,7 @@ function choixLight() {
     var pvPerdu = Math.floor(Math.random() * 10 + 10)
     var nomEnnemiSpecial
 
-    bouttonSpecial.onclick = function(){
+    bouttonSpecial.onclick = function(){ /* attaque special de mon hero */
         if (choixSpecialRandom === 1){
             if (hpEnnemi1.innerHTML <= 0){
                 choixSpecialRandom = 2
@@ -949,7 +952,7 @@ function choixLight() {
         }
         manaLight.innerHTML = manaLight.innerHTML - 50
         hpLight.innerHTML = hpLight.innerHTML - pvPerdu
-        boiteDialogue.innerHTML = "Light utilise Impact et inflige " + degatsSpecialLight + " degats à " + nomEnnemiSpecial + " , et perd " + pvPerdu + " points de vie !"
+        boiteDialogue.innerHTML = "Light utilise Impact et inflige " + degatsSpecialLight + " degats à " + nomEnnemiSpecial + " , et perd " + pvPerdu + " points de vie !" /* dialogue de l'action speciale */
         ordre.style.visibility = "hidden"
         defenseLight = 0
         speLightBlock = 3
@@ -977,14 +980,14 @@ function choixGlad() {
     boiteGlad()
     boiteDialogue.innerHTML = "Glad fait son choix"
 
-    specialAvant.innerHTML = "Triomphe (50 Mana)";
+    specialAvant.innerHTML = "Triomphe (50 Mana)"; /* je modifie le texte de l'attaque spécial par rapport à ce héro */
     specialBlock.innerHTML = "Triomphe (50 Mana)";
     bouttonSpecial.innerHTML = "> Triomphe";
 
     special.style.display = "block"
     specialBlock.style.display = "none"
 
-    bouttonAttaque.onclick = function(){
+    bouttonAttaque.onclick = function(){ /* attaque de mon hero */
         var nomHero = "Glad"
         attaqueHero(nomHero)
         defenseGlad = 0
@@ -995,8 +998,8 @@ function choixGlad() {
         setTimeout(finPartieGagnante, 2000)
     }
     
-    bouttonDefense.onclick = function(){
-        boiteDialogue.innerHTML = "Glad réduit les attaques reçus par les ennemis cette manche"
+    bouttonDefense.onclick = function(){ /* defense de mon hero */
+        boiteDialogue.innerHTML = "Glad réduit les attaques reçus par les ennemis cette manche" /* dialogue de la defense */
         ordre.style.visibility = "hidden"
         defenseGlad = 1
         speGladBlock = 2
@@ -1006,10 +1009,10 @@ function choixGlad() {
 
     /* Ici, l'attaque spécial de mon héro "Glad" vole des points de vie à un ennemi aléatoire, il lui retire puis de l'ajoute dans ses pv personnels */
 
-    bouttonSpecial.onclick = function(){
+    bouttonSpecial.onclick = function(){ /* attaque special de mon hero */
         manaGlad.innerHTML = manaGlad.innerHTML - 50
         hpGlad.innerHTML = 100
-        boiteDialogue.innerHTML = "Glad régénère ses points de vie et revient à 100 !"
+        boiteDialogue.innerHTML = "Glad régénère ses points de vie et revient à 100 !" /* dialogue de l'action speciale */
         ordre.style.visibility = "hidden"
         defenseGlad = 0
         speGladBlock = 3
@@ -1034,16 +1037,16 @@ function choixGlad() {
 
 function choixNinja() {
     boiteNinja()
-    boiteDialogue.innerHTML = "Ninja fait son choix"
+    boiteDialogue.innerHTML = "Ninja fait son choix" 
     
-    specialAvant.innerHTML = "Shuriken (50 Mana)";
+    specialAvant.innerHTML = "Shuriken (50 Mana)"; /* je modifie le texte de l'attaque spécial par rapport à ce héro */
     specialBlock.innerHTML = "Shuriken (50 Mana)";
     bouttonSpecial.innerHTML = "> Shuriken";
 
     special.style.display = "block"
     specialBlock.style.display = "none"
 
-    bouttonAttaque.onclick = function(){
+    bouttonAttaque.onclick = function(){ /* attaque de mon hero */
         var nomHero = "Ninja"
         attaqueHero(nomHero)
         defenseNinja = 0
@@ -1054,8 +1057,8 @@ function choixNinja() {
         setTimeout(finPartieGagnante, 2000)
     }
     
-    bouttonDefense.onclick = function(){
-        boiteDialogue.innerHTML = "Ninja réduit les attaques reçus par les ennemis cette manche"
+    bouttonDefense.onclick = function(){ /* defense de mon hero */
+        boiteDialogue.innerHTML = "Ninja réduit les attaques reçus par les ennemis cette manche" /* dialogue de la defense */
         ordre.style.visibility = "hidden"
         defenseNinja = 1
         speNinjalock = 2
@@ -1067,13 +1070,13 @@ function choixNinja() {
 
     var degatsSpecialNinja =  Math.floor(Math.random() * 15 + 10)
 
-    bouttonSpecial.onclick = function(){
+    bouttonSpecial.onclick = function(){ /* attaque special de mon hero */
         hpEnnemi1.innerHTML = hpEnnemi1.innerHTML - degatsSpecialNinja
         hpEnnemi2.innerHTML = hpEnnemi2.innerHTML - degatsSpecialNinja
         hpEnnemi3.innerHTML = hpEnnemi3.innerHTML - degatsSpecialNinja
         bordureEnnemi1(),bordureEnnemi2(),bordureEnnemi3()
         manaNinja.innerHTML = manaNinja.innerHTML - 50
-        boiteDialogue.innerHTML = "Ninja utilise Shuriken et inflige " + degatsSpecialNinja + " à chaque ennemis !"
+        boiteDialogue.innerHTML = "Ninja utilise Shuriken et inflige " + degatsSpecialNinja + " à chaque ennemis !" /* dialogue de l'action speciale */
         ordre.style.visibility = "hidden"
         defenseNinja = 0
         speNinjalock = 3
@@ -1090,7 +1093,7 @@ function choixNinja() {
         defenseGrise ()
     }
     if (speNinjalock === 3){
-        attaquerGrise ()
+        specialeGrise ()
     }
 }
 
@@ -1099,8 +1102,8 @@ function choixNinja() {
 function attaqueEnnemi(nomEnnemi) {
     var min=1; 
     var max=5;  
-    var choixAttaqueEnnemiRandom = Math.floor(Math.random() * (max - min)) + min; 
-    var degatsEnnemi =  Math.floor(Math.random() * 20 + 20)
+    var choixAttaqueEnnemiRandom = Math.floor(Math.random() * (max - min)) + min;  /* pour que mes ennemis vises un héro aléatoire */
+    var degatsEnnemi =  Math.floor(Math.random() * 20 + 20) /* pour que mes ennemis font des dégats aléatoire entre 20 et 40 */
 
     if (choixAttaqueEnnemiRandom === 1){
         if (hpUlti.innerHTML <= 0){
@@ -1130,7 +1133,7 @@ function attaqueEnnemi(nomEnnemi) {
     }
 
     if (choixAttaqueEnnemiRandom === 1){
-        if (defenseUlti == 1){
+        if (defenseUlti == 1){ /* pour que lorsque la defense de ulti est activé ses dégats recu sont divisés par 2 */
             degatsEnnemi = Math.round(degatsEnnemi/2 )
             hpUlti.innerHTML = hpUlti.innerHTML - degatsEnnemi
             boiteDialogue.innerHTML = "Ulti se défend et divise les attaques par 2, " + nomEnnemi + " lui inflige " + degatsEnnemi + " degats"
@@ -1142,7 +1145,7 @@ function attaqueEnnemi(nomEnnemi) {
         }
     }
     if (choixAttaqueEnnemiRandom === 2){ 
-        if (defenseLight == 1){
+        if (defenseLight == 1){ /* pour que lorsque la defense de light est activé ses dégats recu sont divisés par 2 */
             degatsEnnemi = Math.round(degatsEnnemi/2 )
             hpLight.innerHTML = hpLight.innerHTML - degatsEnnemi
             boiteDialogue.innerHTML = "Light se défend et divise les attaques par 2, " + nomEnnemi + " lui inflige " + degatsEnnemi + " degats"
@@ -1154,7 +1157,7 @@ function attaqueEnnemi(nomEnnemi) {
         }
     }
     if (choixAttaqueEnnemiRandom === 3){
-        if (defenseGlad == 1){
+        if (defenseGlad == 1){ /* pour que lorsque la defense de glad est activé ses dégats recu sont divisés par 2 */
             degatsEnnemi = Math.round(degatsEnnemi/2 )
             hpGlad.innerHTML = hpGlad.innerHTML - degatsEnnemi
             boiteDialogue.innerHTML = "Glad se défend et divise les attaques par 2, " + nomEnnemi + " lui inflige " + degatsEnnemi + " degats"
@@ -1166,7 +1169,7 @@ function attaqueEnnemi(nomEnnemi) {
         }
     }
     if (choixAttaqueEnnemiRandom === 4){
-        if (defenseNinja == 1){
+        if (defenseNinja == 1){ /* pour que lorsque la defense de ninja est activé ses dégats recu sont divisés par 2 */
             degatsEnnemi = Math.round(degatsEnnemi/2 )
             hpNinja.innerHTML = hpNinja.innerHTML - degatsEnnemi
             boiteDialogue.innerHTML = "Ninja se défend et divise les attaques par 2, " + nomEnnemi + " lui inflige " + degatsEnnemi + " degats"
@@ -1203,7 +1206,7 @@ function choixCleaner(){
 /* Ici, j'initialise l'attaque de mon ennemi "Hurler" */
 
 function choixHurler(){
-    boiteHurler()
+    boiteHurler() 
     var nomEnnemi = "Hurler"
     attaqueEnnemi(nomEnnemi)
     finHpHero()
