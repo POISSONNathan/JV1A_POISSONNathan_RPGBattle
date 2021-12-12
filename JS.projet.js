@@ -310,6 +310,7 @@ function finHpNinja (){ /* fonction qui indique que mon héro ninja est mort, il
 
 function finHpBurner (){ /* fonction qui fait disparaitre mon ennemi burner */
     if (hpEnnemi1.innerHTML <= 0){
+        hpEnnemi1.innerHTML = 0
         setTimeout( function (){
             ennemi1.style.display = "none"
             mortBurner.style.display = "block"
@@ -319,6 +320,7 @@ function finHpBurner (){ /* fonction qui fait disparaitre mon ennemi burner */
 
 function finHpCleaner (){ /* fonction qui fait disparaitre mon ennemi cleaner */
     if (hpEnnemi2.innerHTML <= 0){
+        hpEnnemi2.innerHTML = 0
         setTimeout( function (){
             ennemi2.style.display = "none"
             mortCleaner.style.display = "block"
@@ -328,6 +330,7 @@ function finHpCleaner (){ /* fonction qui fait disparaitre mon ennemi cleaner */
 
 function finHpHurler (){ /* fonction qui fait disparaitre mon ennemi hurler */
     if (hpEnnemi3.innerHTML <= 0){
+        hpEnnemi3.innerHTML = 0
         setTimeout( function (){
             ennemi3.style.display = "none"
             mortHurler.style.display = "block"

@@ -55,7 +55,7 @@
 #bouttonVoirSpecial{
     background-color : rgb(21, 255, 0, .5);
     font-size: 30px;
-    border-radius: 7px ;
+    border-radius: 8px ;
     border : solid black  ;
     width: 500px;
     text-align: center;
